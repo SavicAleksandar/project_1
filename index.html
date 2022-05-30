@@ -1,0 +1,1071 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+        <link rel="stylesheet" type="text/css" href="style.css">
+    
+        <title>Welcome</title>
+    
+    </head>
+
+<body>
+    <!-- NAVIGATION BAR -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light bg-opacity-50 fixed-top">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#"><img src="/images/logo.png" alt=""></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#" id="#Home">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#Cakes">Cakes</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#Desserts">Desserts</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#Tips&Tricks">Tips&Tricks</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#About">About</a>
+              </li>
+          </div>
+          
+          <!-- CART, LOGIN, REGISTER -->
+          <div class="d-flex">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" data-bs-toggle="modal" data-bs-target="#shoping_cart" href="#"><i class="bi bi-cart4 pe-2"></i>Shoping Cart</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-bs-toggle="modal" data-bs-target="#password" href="#">Login</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-bs-toggle="modal" data-bs-target="#register" href="#">Register</a>
+                </li>
+            </ul>
+        </div>
+        </div>
+    </nav>
+
+    <!-- USERNAME & PASSWORD FORM-->
+    <div class="modal fade" id="password" tabindex="-1" aria-labelledby="usernamePasswordModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="usernamePasswordModalLabel"><i class="bi bi-key-fill p-2"></i>Enter your username and password</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <form>
+                <div class="mb-3">
+                  <label for="username" class="col-form-label">Username:</label>
+                  <input type="text" class="form-control" id="username">
+                </div>
+                <div class="mb-3">
+                  <label for="password" class="col-form-label">Password:</label>
+                  <input class="form-control" id="password"></input>
+                </div>
+              </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-success">Submit</button>
+                <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    <!-- REGISTER NEW USER FORM -->
+    <div class="modal fade" id="register" tabindex="-1" aria-labelledby="registerNewUserLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="registerNewUserLabel">Register</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="row"> 
+                    <div class="col-lg">
+                        <form>
+                            <div class="mb-3">
+                                <label for="name" class="col-form-label"><i class="bi bi-person-fill p-1"></i>Name:</label>
+                                <input type="text" class="form-control" id="name" placeholder="Name">
+                            </div>
+                            <div class="mb-3">
+                                <label for="email" class="col-form-label"><i class="bi bi-envelope-fill p-1"></i>Email:</label>
+                                <input class="form-control" id="email" placeholder="Email"></input>
+                            </div>
+                            <div class="mb-3">
+                                <label for="password" class="col-form-label"><i class="bi bi-key-fill p-1"></i>Password:</label>
+                                <input class="form-control" id="email" placeholder="Password"></input>
+                            </div>
+                            <div class="mb-3">
+                                <label for="password" class="col-form-label"><i class="bi bi-key-fill p-1"></i>Repeat Password:</label>
+                                <input class="form-control" id="email" placeholder="Repeat Password"></input>
+                            </div>
+                            <div class="mb-3">
+                                <label for="phone" class="col-form-label"><i class="bi bi-telephone-fill p-1"></i>Phone:</label>
+                                <input class="form-control" id="phone" placeholder="Phone"></input>
+                            </div>
+                            <div class="mb-3">
+                                <label for="adress" class="col-form-label"><i class="bi bi-building p-1"></i>Adress:</label>
+                                <input class="form-control" id="adress" placeholder="Adress"></input>
+                            </div>
+                        </form>
+                    </div>   
+                </div>   
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-success">Submit</button>
+                <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+    </div>
+
+    <!-- JUMBOTRON -->
+    <div class="container-fluid jumbotron">
+        <div class="container jumbotron-body">
+            <h1 class=" display-1 pt-5">Cakes for every occasion</h1>
+            <hr class="my-4">
+            <p class="display-5 m-3 p-3">We help you create perfect party</p>
+            <a class="btn btn-light btn-lg m-3 ps-4 pe-4" href="#" role="button">Discover more</a>
+        </div>
+    </div>
+
+    <hr class="mt-3">
+
+    <!-- FEATURED CAKES -->
+    <div class="container-fluid">
+        <h1 id="Cakes"class="display-4" style="text-align: center;">
+            FEATURED CAKES
+        </h1>
+            <div class="row m-3 p-3" style="justify-content: center;">
+                <!-- Strawberry Cake Card -->
+                <div class="col-lg-2 m-3">
+                    <div class="card">
+                        <img src="images/cakes/strawberry_cake.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                        <h5 class="card-title">Strawberry Cake</h5>
+                        <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis labore eveniet nostrum, iure minima architecto, consequuntur sapiente fugit dolorum reiciendis eaque reprehenderit? Est dolor nihil impedit ab reiciendis ut cumque?.</p>
+                        <a href="#" type ="button" class="btn btn-light" data-bs-toggle="modal" data-bs-target="#strawberryCake">from 70€</a>
+                        </div>
+                    </div>
+                </div>
+        
+                <!-- Blueberry Cake Card -->
+                <div class="col-lg-2 m-3">
+                    <div class="card">
+                        <img src="images/cakes/blueberry_cake.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                        <h5 class="card-title">Blueberry Cake</h5>
+                        <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis labore eveniet nostrum, iure minima architecto, consequuntur sapiente fugit dolorum reiciendis eaque reprehenderit? Est dolor nihil impedit ab reiciendis ut cumque?.</p>
+                        <a href="#" type ="button" class="btn btn-light" data-bs-toggle="modal" data-bs-target="#blueberryCake">from 70€</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Chocolate Cake Card -->
+                <div class="col-lg-2 m-3">
+                    <div class="card">
+                        <img src="images/cakes/chocolate_cake.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                        <h5 class="card-title">Chocolate Cake</h5>
+                        <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis labore eveniet nostrum, iure minima architecto, consequuntur sapiente fugit dolorum reiciendis eaque reprehenderit? Est dolor nihil impedit ab reiciendis ut cumque?.</p>
+                        <a href="#" type ="button" class="btn btn-light" data-bs-toggle="modal" data-bs-target="#chocolateCake">from 70€</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Ice Cake Card -->
+                <div class="col-lg-2 m-3">
+                    <div class="card">
+                        <img src="images/cakes/ice_cake.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                        <h5 class="card-title">Ice Cake</h5>
+                        <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis labore eveniet nostrum, iure minima architecto, consequuntur sapiente fugit dolorum reiciendis eaque reprehenderit? Est dolor nihil impedit ab reiciendis ut cumque?.</p>
+                        <a href="#" type ="button" class="btn btn-light" data-bs-toggle="modal" data-bs-target="#iceCake">from 70€</a>
+                        </div>
+                    </div>
+                </div>      
+                
+                <!-- Vanilla Cake Card -->
+                <div class="col-lg-2 m-3">
+                    <div class="card">
+                        <img src="images/cakes/vanilla_cake.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Vanilla Cake</h5>
+                            <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis labore eveniet nostrum, iure minima architecto, consequuntur sapiente fugit dolorum reiciendis eaque reprehenderit? Est dolor nihil impedit ab reiciendis ut cumque?.</p>
+                            <a href="#" type ="button" class="btn btn-light" data-bs-toggle="modal" data-bs-target="#vanillaCake">from 70€</a>
+                        </div>
+                    </div>
+                </div
+            </div>   
+    </div>
+
+    <!-- Modal - Strawberry cake -->
+    <div class="modal fade" id="strawberryCake" tabindex="-1" aria-labelledby="strawberryCakeLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+            <h5 class="modal-title" id="strawberryCakeLabel">Strawberry Cake</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body row">
+                <div class="col-lg-6">
+                    <!-- Choose size -->
+                    <h6>Size</h6>
+                    <button type="button" class="btn btn-light m-2 text-dark">15cm Cake | Serves 6 - 8</button>
+                    <button type="button" class="btn btn-light m-2 text-dark">20cm Cake | Serves 10 - 15</button>
+                    <button type="button" class="btn btn-light m-2 text-dark">25cm Cake | Serves 20 - 25</button>
+                    <hr>
+
+                    <!-- Choose quantity -->
+                    <h6>Quantity</h6>
+                    <div class="dropdown">
+                        <button class="btn btn-light dropdown-toggle m-2 text-dark" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                          Choose ...
+                        </button>
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                          <li><a class="dropdown-item" href="#">1</a></li>
+                          <li><a class="dropdown-item" href="#">2</a></li>
+                          <li><a class="dropdown-item" href="#">3</a></li>
+                        </ul>
+                      </div>
+                    
+                    <ul class="list-group m-2">
+                        <li class="list-group-item">
+                        <input class="form-check-input me-1" type="checkbox" value="" aria-label="...">
+                        GLUTEN FREE 15$
+                        </li>
+                    </ul>
+                    <hr>
+
+                    <!-- Description -->
+                    <h6>Description</h6>
+                    <p class="m-2">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione quis rem expedita vero accusamus consequuntur cumque nihil minima ex iusto nesciunt porro dicta velit quos molestias perspiciatis odio, dolorem repudiandae.
+                    </p>
+                    <hr>
+
+                    <!-- Total price -->
+                    <h6>Total price</h6>
+                    <p class="m-2">$100.00</p>
+                </div>
+
+                <div class="col-lg-6">
+                    <!-- Picture -->
+                    <img src="images/cakes/strawberry_cake.jpg" alt="" class="card-img-top">
+                    <a href="#" class="nav-link text-dark"><i class="bi bi-facebook pe-2"></i>Share</a>
+                    
+                    <a href="#" class="nav-link text-dark"><i class="bi bi-pinterest pe-2"></i>Pin It</a>
+                </div>
+            </div>
+            <div class="modal-footer">
+            <button type="button" class="btn btn-success text-dark">Add to Cart</button>
+            <button type="button" class="btn btn-danger text-dark" data-bs-dismiss="modal">Close</button>
+            </div>
+        </div>
+        </div>
+    </div>
+    
+    <!-- Modal - Blueberry cake -->
+    <div class="modal fade" id="blueberryCake" tabindex="-1" aria-labelledby="bluberryCakeLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+            <h5 class="modal-title" id="blueberryCakeLabel">Blueberry Cake</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body row">
+                <div class="col-lg-6">
+                    <!-- Choose size -->
+                    <h6>Size</h6>
+                    <button type="button" class="btn btn-light m-2 text-dark">15cm Cake | Serves 6 - 8</button>
+                    <button type="button" class="btn btn-light m-2 text-dark">20cm Cake | Serves 10 - 15</button>
+                    <button type="button" class="btn btn-light m-2 text-dark">25cm Cake | Serves 20 - 25</button>
+                    <hr>
+
+                    <!-- Choose quantity -->
+                    <h6>Quantity</h6>
+                    <div class="dropdown">
+                        <button class="btn btn-light dropdown-toggle m-2 text-dark" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                          Choose ...
+                        </button>
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                          <li><a class="dropdown-item" href="#">1</a></li>
+                          <li><a class="dropdown-item" href="#">2</a></li>
+                          <li><a class="dropdown-item" href="#">3</a></li>
+                        </ul>
+                      </div>
+                    
+                    <ul class="list-group m-2">
+                        <li class="list-group-item">
+                        <input class="form-check-input me-1" type="checkbox" value="" aria-label="...">
+                        GLUTEN FREE 15$
+                        </li>
+                    </ul>
+                    <hr>
+
+                    <!-- Description -->
+                    <h6>Description</h6>
+                    <p class="m-2">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione quis rem expedita vero accusamus consequuntur cumque nihil minima ex iusto nesciunt porro dicta velit quos molestias perspiciatis odio, dolorem repudiandae.
+                    </p>
+                    <hr>
+
+                    <!-- Total price -->
+                    <h6>Total price</h6>
+                    <p class="m-2">$100.00</p>
+                </div>
+
+                <div class="col-lg-6">
+                    <!-- Picture -->
+                    <img src="images/cakes/blueberry_cake.jpg" alt="" class="card-img-top">
+                    <a href="#" class="nav-link text-dark"><i class="bi bi-facebook pe-2"></i>Share</a>
+                    
+                    <a href="#" class="nav-link text-dark"><i class="bi bi-pinterest pe-2"></i>Pin It</a>
+                </div>
+            </div>
+            <div class="modal-footer">
+            <button type="button" class="btn btn-success text-dark">Add to Cart</button>
+            <button type="button" class="btn btn-danger text-dark" data-bs-dismiss="modal">Close</button>
+            </div>
+        </div>
+        </div>
+    </div>
+
+    <!-- Modal - Chocolate cake -->
+    <div class="modal fade" id="chocolateCake" tabindex="-1" aria-labelledby="chocolateCakeLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+            <h5 class="modal-title" id="chocolateCakeLabel">Chocolate Cake</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body row">
+                <div class="col-lg-6">
+                    <!-- Choose size -->
+                    <h6>Size</h6>
+                    <button type="button" class="btn btn-light m-2 text-dark">15cm Cake | Serves 6 - 8</button>
+                    <button type="button" class="btn btn-light m-2 text-dark">20cm Cake | Serves 10 - 15</button>
+                    <button type="button" class="btn btn-light m-2 text-dark">25cm Cake | Serves 20 - 25</button>
+                    <hr>
+
+                    <!-- Choose quantity -->
+                    <h6>Quantity</h6>
+                    <div class="dropdown">
+                        <button class="btn btn-light dropdown-toggle m-2 text-dark" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                          Choose ...
+                        </button>
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                          <li><a class="dropdown-item" href="#">1</a></li>
+                          <li><a class="dropdown-item" href="#">2</a></li>
+                          <li><a class="dropdown-item" href="#">3</a></li>
+                        </ul>
+                      </div>
+                    
+                    <ul class="list-group m-2">
+                        <li class="list-group-item">
+                        <input class="form-check-input me-1" type="checkbox" value="" aria-label="...">
+                        GLUTEN FREE 15$
+                        </li>
+                    </ul>
+                    <hr>
+
+                    <!-- Description -->
+                    <h6>Description</h6>
+                    <p class="m-2">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione quis rem expedita vero accusamus consequuntur cumque nihil minima ex iusto nesciunt porro dicta velit quos molestias perspiciatis odio, dolorem repudiandae.
+                    </p>
+                    <hr>
+
+                    <!-- Total price -->
+                    <h6>Total price</h6>
+                    <p class="m-2">$100.00</p>
+                </div>
+
+                <div class="col-lg-6">
+                    <!-- Picture -->
+                    <img src="images/cakes/chocolate_cake.jpg" alt="" class="card-img-top">
+                    <a href="#" class="nav-link text-dark"><i class="bi bi-facebook pe-2"></i>Share</a>
+                    
+                    <a href="#" class="nav-link text-dark"><i class="bi bi-pinterest pe-2"></i>Pin It</a>
+                </div>
+            </div>
+            <div class="modal-footer">
+            <button type="button" class="btn btn-success text-dark">Add to Cart</button>
+            <button type="button" class="btn btn-danger text-dark" data-bs-dismiss="modal">Close</button>
+            </div>
+        </div>
+        </div>
+    </div>
+
+    <!-- Modal - Ice cake -->
+    <div class="modal fade" id="iceCake" tabindex="-1" aria-labelledby="iceCakeLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+            <h5 class="modal-title" id="iceCakeLabel">Ice Cake</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body row">
+                <div class="col-lg-6">
+                    <!-- Choose size -->
+                    <h6>Size</h6>
+                    <button type="button" class="btn btn-light m-2 text-dark">15cm Cake | Serves 6 - 8</button>
+                    <button type="button" class="btn btn-light m-2 text-dark">20cm Cake | Serves 10 - 15</button>
+                    <button type="button" class="btn btn-light m-2 text-dark">25cm Cake | Serves 20 - 25</button>
+                    <hr>
+
+                    <!-- Choose quantity -->
+                    <h6>Quantity</h6>
+                    <div class="dropdown">
+                        <button class="btn btn-light dropdown-toggle m-2 text-dark" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                          Choose ...
+                        </button>
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                          <li><a class="dropdown-item" href="#">1</a></li>
+                          <li><a class="dropdown-item" href="#">2</a></li>
+                          <li><a class="dropdown-item" href="#">3</a></li>
+                        </ul>
+                      </div>
+                    
+                    <ul class="list-group m-2">
+                        <li class="list-group-item">
+                        <input class="form-check-input me-1" type="checkbox" value="" aria-label="...">
+                        GLUTEN FREE 15$
+                        </li>
+                    </ul>
+                    <hr>
+
+                    <!-- Description -->
+                    <h6>Description</h6>
+                    <p class="m-2">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione quis rem expedita vero accusamus consequuntur cumque nihil minima ex iusto nesciunt porro dicta velit quos molestias perspiciatis odio, dolorem repudiandae.
+                    </p>
+                    <hr>
+
+                    <!-- Total price -->
+                    <h6>Total price</h6>
+                    <p class="m-2">$100.00</p>
+                </div>
+
+                <div class="col-lg-6">
+                    <!-- Picture -->
+                    <img src="images/cakes/ice_cake.jpg" alt="" class="card-img-top">
+                    <a href="#" class="nav-link text-dark"><i class="bi bi-facebook pe-2"></i>Share</a>
+                    
+                    <a href="#" class="nav-link text-dark"><i class="bi bi-pinterest pe-2"></i>Pin It</a>
+                </div>
+            </div>
+            <div class="modal-footer">
+            <button type="button" class="btn btn-success text-dark">Add to Cart</button>
+            <button type="button" class="btn btn-danger text-dark" data-bs-dismiss="modal">Close</button>
+            </div>
+        </div>
+        </div>
+    </div>
+
+    <!-- Modal - Vanilla cake -->
+    <div class="modal fade" id="vanillaCake" tabindex="-1" aria-labelledby="vanillaCakeLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+            <h5 class="modal-title" id="vanillaCakeLabel">Vanilla Cake</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body row">
+                <div class="col-lg-6">
+                    <!-- Choose size -->
+                    <h6>Size</h6>
+                    <button type="button" class="btn btn-light m-2 text-dark">15cm Cake | Serves 6 - 8</button>
+                    <button type="button" class="btn btn-light m-2 text-dark">20cm Cake | Serves 10 - 15</button>
+                    <button type="button" class="btn btn-light m-2 text-dark">25cm Cake | Serves 20 - 25</button>
+                    <hr>
+
+                    <!-- Choose quantity -->
+                    <h6>Quantity</h6>
+                    <div class="dropdown">
+                        <button class="btn btn-light dropdown-toggle m-2 text-dark" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                          Choose ...
+                        </button>
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                          <li><a class="dropdown-item" href="#">1</a></li>
+                          <li><a class="dropdown-item" href="#">2</a></li>
+                          <li><a class="dropdown-item" href="#">3</a></li>
+                        </ul>
+                      </div>
+                    
+                    <ul class="list-group m-2">
+                        <li class="list-group-item">
+                        <input class="form-check-input me-1" type="checkbox" value="" aria-label="...">
+                        GLUTEN FREE 15$
+                        </li>
+                    </ul>
+                    <hr>
+
+                    <!-- Description -->
+                    <h6>Description</h6>
+                    <p class="m-2">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione quis rem expedita vero accusamus consequuntur cumque nihil minima ex iusto nesciunt porro dicta velit quos molestias perspiciatis odio, dolorem repudiandae.
+                    </p>
+                    <hr>
+
+                    <!-- Total price -->
+                    <h6>Total price</h6>
+                    <p class="m-2">$100.00</p>
+                </div>
+
+                <div class="col-lg-6">
+                    <!-- Picture -->
+                    <img src="images/cakes/vanilla_cake.jpg" alt="" class="card-img-top">
+                    <a href="#" class="nav-link text-dark"><i class="bi bi-facebook pe-2"></i>Share</a>
+                    
+                    <a href="#" class="nav-link text-dark"><i class="bi bi-pinterest pe-2"></i>Pin It</a>
+                </div>
+            </div>
+            <div class="modal-footer">
+            <button type="button" class="btn btn-success text-dark">Add to Cart</button>
+            <button type="button" class="btn btn-danger text-dark" data-bs-dismiss="modal">Close</button>
+            </div>
+        </div>
+        </div>
+    </div>
+
+    <hr class="mt-3">
+
+    <!-- FEATURED DESSERTS -->  
+    <div class="container-fluid">
+        <h1 id="Desserts" class="display-4" style="text-align: center;">
+            FEATURED DESSERTS
+        </h1>
+        <div class="row m-3 p-3" style="justify-content: center;">
+            <!-- Donuts CARD -->
+            <div class="col-lg-2 m-3">
+                <div class="card">
+                    <img src="images/desserts/donuts.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Donuts</h5>
+                        <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis labore eveniet nostrum, iure minima architecto, consequuntur sapiente fugit dolorum reiciendis eaque reprehenderit? Est dolor nihil impedit ab reiciendis ut cumque?.</p>
+                        <a href="#" type ="button" class="btn btn-light" data-bs-toggle="modal" data-bs-target="#donuts">from 5€</a>
+                    </div>
+                </div>
+            </div>
+                
+            <!-- Fresh desserts CARD -->
+            <div class="col-lg-2 m-3">
+                <div class="card">
+                    <img src="images/desserts/fresh_desserts.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Fresh Desserts</h5>
+                        <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis labore eveniet nostrum, iure minima architecto, consequuntur sapiente fugit dolorum reiciendis eaque reprehenderit? Est dolor nihil impedit ab reiciendis ut cumque?.</p>
+                        <a href="#" type ="button" class="btn btn-light" data-bs-toggle="modal" data-bs-target="#freshDesserts">from 5€</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Macrons CARD -->
+            <div class="col-lg-2 m-3">
+                <div class="card">
+                    <img src="images/desserts/macrons.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Macrons</h5>
+                        <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis labore eveniet nostrum, iure minima architecto, consequuntur sapiente fugit dolorum reiciendis eaque reprehenderit? Est dolor nihil impedit ab reiciendis ut cumque?.</p>
+                        <a href="#" type ="button" class="btn btn-light" data-bs-toggle="modal" data-bs-target="#macrons">from 5€</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Chocolate muffins CARD -->
+            <div class="col-lg-2 m-3">
+                <div class="card">
+                    <img src="images/desserts/muffins.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Chocolate Muffins</h5>
+                        <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis labore eveniet nostrum, iure minima architecto, consequuntur sapiente fugit dolorum reiciendis eaque reprehenderit? Est dolor nihil impedit ab reiciendis ut cumque?.</p>
+                        <a href="#" type ="button" class="btn btn-light" data-bs-toggle="modal" data-bs-target="#chocolateMuffins">from 5€</a>
+                    </div>
+                </div>
+            </div>      
+                
+            <!-- Rainbow muffins CARD -->
+            <div class="col-lg-2 m-3">    
+                <div class="card">
+                    <img src="images/desserts/rainbow_muffins.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Rainbow Muffins</h5>
+                        <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis labore eveniet nostrum, iure minima architecto, consequuntur sapiente fugit dolorum reiciendis eaque reprehenderit? Est dolor nihil impedit ab reiciendis ut cumque?.</p>
+                        <a href="#" type ="button" class="btn btn-light" data-bs-toggle="modal" data-bs-target="#rainbowMuffins">from 5€</a>
+                    </div>
+                </div>
+            </div        
+        </div>
+    </div>
+
+    <!-- Modal - Donuts -->
+    <div class="modal fade" id="donuts" tabindex="-1" aria-labelledby="donutsLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+            <h5 class="modal-title" id="donutsLabel">Donuts</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body row">
+                <div class="col-lg-6">
+                    <!-- Choose size -->
+                    <h6>Size</h6>
+                    <button type="button" class="btn btn-light m-2 text-dark">Serves 6</button>
+                    <button type="button" class="btn btn-light m-2 text-dark">Serves 10</button>
+                    <button type="button" class="btn btn-light m-2 text-dark">Serves 14</button>
+                    <hr>
+
+                    <!-- Choose quantity -->
+                    <h6>Quantity</h6>
+                    <div class="dropdown">
+                        <button class="btn btn-light dropdown-toggle m-2 text-dark" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                          Choose ...
+                        </button>
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                          <li><a class="dropdown-item" href="#">1</a></li>
+                          <li><a class="dropdown-item" href="#">2</a></li>
+                          <li><a class="dropdown-item" href="#">3</a></li>
+                        </ul>
+                      </div>
+                    
+                    <ul class="list-group m-2">
+                        <li class="list-group-item">
+                        <input class="form-check-input me-1" type="checkbox" value="" aria-label="...">
+                        GLUTEN FREE 15$
+                        </li>
+                    </ul>
+                    <hr>
+
+                    <!-- Description -->
+                    <h6>Description</h6>
+                    <p class="m-2">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione quis rem expedita vero accusamus consequuntur cumque nihil minima ex iusto nesciunt porro dicta velit quos molestias perspiciatis odio, dolorem repudiandae.
+                    </p>
+                    <hr>
+
+                    <!-- Total price -->
+                    <h6>Total price</h6>
+                    <p class="m-2">$30.00</p>
+                </div>
+
+                <div class="col-lg-6">
+                    <!-- Picture -->
+                    <img src="images/desserts/donuts.jpg" alt="" class="card-img-top">
+                    <a href="#" class="nav-link text-dark"><i class="bi bi-facebook pe-2"></i>Share</a>
+                    
+                    <a href="#" class="nav-link text-dark"><i class="bi bi-pinterest pe-2"></i>Pin It</a>
+                </div>
+            </div>
+            <div class="modal-footer">
+            <button type="button" class="btn btn-success text-dark">Add to Cart</button>
+            <button type="button" class="btn btn-danger text-dark" data-bs-dismiss="modal">Close</button>
+            </div>
+        </div>
+        </div>
+    </div>
+    
+    <!-- Modal - Fresh Desserts -->
+    <div class="modal fade" id="freshDesserts" tabindex="-1" aria-labelledby="freshDessertesLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+            <h5 class="modal-title" id="freshDessertsLabel">Fresh Desserts</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body row">
+                <div class="col-lg-6">
+                    <!-- Choose size -->
+                    <h6>Size</h6>
+                    <button type="button" class="btn btn-light m-2 text-dark">Serves 6</button>
+                    <button type="button" class="btn btn-light m-2 text-dark">Serves 10</button>
+                    <button type="button" class="btn btn-light m-2 text-dark">Serves 14</button>
+                    <hr>
+
+                    <!-- Choose quantity -->
+                    <h6>Quantity</h6>
+                    <div class="dropdown">
+                        <button class="btn btn-light dropdown-toggle m-2 text-dark" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                          Choose ...
+                        </button>
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                          <li><a class="dropdown-item" href="#">1</a></li>
+                          <li><a class="dropdown-item" href="#">2</a></li>
+                          <li><a class="dropdown-item" href="#">3</a></li>
+                        </ul>
+                      </div>
+                    
+                    <ul class="list-group m-2">
+                        <li class="list-group-item">
+                        <input class="form-check-input me-1" type="checkbox" value="" aria-label="...">
+                        GLUTEN FREE 15$
+                        </li>
+                    </ul>
+                    <hr>
+
+                    <!-- Description -->
+                    <h6>Description</h6>
+                    <p class="m-2">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione quis rem expedita vero accusamus consequuntur cumque nihil minima ex iusto nesciunt porro dicta velit quos molestias perspiciatis odio, dolorem repudiandae.
+                    </p>
+                    <hr>
+
+                    <!-- Total price -->
+                    <h6>Total price</h6>
+                    <p class="m-2">$30.00</p>
+                </div>
+
+                <div class="col-lg-6">
+                    <!-- Picture -->
+                    <img src="images/desserts/fresh_desserts.jpg" alt="" class="card-img-top">
+                    <a href="#" class="nav-link text-dark"><i class="bi bi-facebook pe-2"></i>Share</a>
+                    
+                    <a href="#" class="nav-link text-dark"><i class="bi bi-pinterest pe-2"></i>Pin It</a>
+                </div>
+            </div>
+            <div class="modal-footer">
+            <button type="button" class="btn btn-success text-dark">Add to Cart</button>
+            <button type="button" class="btn btn-danger text-dark" data-bs-dismiss="modal">Close</button>
+            </div>
+        </div>
+        </div>
+    </div>
+
+    <!-- Modal - Macrons -->
+    <div class="modal fade" id="macrons" tabindex="-1" aria-labelledby="macronsLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+            <h5 class="modal-title" id="macronsLabel">Macrons</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body row">
+                <div class="col-lg-6">
+                    <!-- Choose size -->
+                    <h6>Size</h6>
+                    <button type="button" class="btn btn-light m-2 text-dark">Serves 6</button>
+                    <button type="button" class="btn btn-light m-2 text-dark">Serves 10</button>
+                    <button type="button" class="btn btn-light m-2 text-dark">Serves 14</button>
+                    <hr>
+
+                    <!-- Choose quantity -->
+                    <h6>Quantity</h6>
+                    <div class="dropdown">
+                        <button class="btn btn-light dropdown-toggle m-2 text-dark" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                          Choose ...
+                        </button>
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                          <li><a class="dropdown-item" href="#">1</a></li>
+                          <li><a class="dropdown-item" href="#">2</a></li>
+                          <li><a class="dropdown-item" href="#">3</a></li>
+                        </ul>
+                      </div>
+                    
+                    <ul class="list-group m-2">
+                        <li class="list-group-item">
+                        <input class="form-check-input me-1" type="checkbox" value="" aria-label="...">
+                        GLUTEN FREE 15$
+                        </li>
+                    </ul>
+                    <hr>
+
+                    <!-- Description -->
+                    <h6>Description</h6>
+                    <p class="m-2">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione quis rem expedita vero accusamus consequuntur cumque nihil minima ex iusto nesciunt porro dicta velit quos molestias perspiciatis odio, dolorem repudiandae.
+                    </p>
+                    <hr>
+
+                    <!-- Total price -->
+                    <h6>Total price</h6>
+                    <p class="m-2">$30.00</p>
+                </div>
+
+                <div class="col-lg-6">
+                    <!-- Picture -->
+                    <img src="images/desserts/macrons.jpg" alt="" class="card-img-top">
+                    <a href="#" class="nav-link text-dark"><i class="bi bi-facebook pe-2"></i>Share</a>
+                    
+                    <a href="#" class="nav-link text-dark"><i class="bi bi-pinterest pe-2"></i>Pin It</a>
+                </div>
+            </div>
+            <div class="modal-footer">
+            <button type="button" class="btn btn-success text-dark">Add to Cart</button>
+            <button type="button" class="btn btn-danger text-dark" data-bs-dismiss="modal">Close</button>
+            </div>
+        </div>
+        </div>
+    </div>
+
+    <!-- Modal - Chocolate muffins -->
+    <div class="modal fade" id="chocolateMuffins" tabindex="-1" aria-labelledby="chocolateMuffinsLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+            <h5 class="modal-title" id="chocolateMuffinsLabel">Chocolate Muffins</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body row">
+                <div class="col-lg-6">
+                    <!-- Choose size -->
+                    <h6>Size</h6>
+                    <button type="button" class="btn btn-light m-2 text-dark">Serves 6</button>
+                    <button type="button" class="btn btn-light m-2 text-dark">Serves 10</button>
+                    <button type="button" class="btn btn-light m-2 text-dark">Serves 14</button>
+                    <hr>
+
+                    <!-- Choose quantity -->
+                    <h6>Quantity</h6>
+                    <div class="dropdown">
+                        <button class="btn btn-light dropdown-toggle m-2 text-dark" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                          Choose ...
+                        </button>
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                          <li><a class="dropdown-item" href="#">1</a></li>
+                          <li><a class="dropdown-item" href="#">2</a></li>
+                          <li><a class="dropdown-item" href="#">3</a></li>
+                        </ul>
+                      </div>
+                    
+                    <ul class="list-group m-2">
+                        <li class="list-group-item">
+                        <input class="form-check-input me-1" type="checkbox" value="" aria-label="...">
+                        GLUTEN FREE 15$
+                        </li>
+                    </ul>
+                    <hr>
+
+                    <!-- Description -->
+                    <h6>Description</h6>
+                    <p class="m-2">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione quis rem expedita vero accusamus consequuntur cumque nihil minima ex iusto nesciunt porro dicta velit quos molestias perspiciatis odio, dolorem repudiandae.
+                    </p>
+                    <hr>
+
+                    <!-- Total price -->
+                    <h6>Total price</h6>
+                    <p class="m-2">$30.00</p>
+                </div>
+
+                <div class="col-lg-6">
+                    <!-- Picture -->
+                    <img src="images/desserts/muffins.jpg" alt="" class="card-img-top">
+                    <a href="#" class="nav-link text-dark"><i class="bi bi-facebook pe-2"></i>Share</a>
+                    
+                    <a href="#" class="nav-link text-dark"><i class="bi bi-pinterest pe-2"></i>Pin It</a>
+                </div>
+            </div>
+            <div class="modal-footer">
+            <button type="button" class="btn btn-success text-dark">Add to Cart</button>
+            <button type="button" class="btn btn-danger text-dark" data-bs-dismiss="modal">Close</button>
+            </div>
+        </div>
+        </div>
+    </div>
+
+    <!-- Modal - Rainbow muffins -->
+    <div class="modal fade" id="rainbowMuffins" tabindex="-1" aria-labelledby="rainbowMuffinsLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+            <h5 class="modal-title" id="rainbowMuffinsLabel">Rainbow Muffins</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body row">
+                <div class="col-lg-6">
+                    <!-- Choose size -->
+                    <h6>Size</h6>
+                    <button type="button" class="btn btn-light m-2 text-dark">Serves 6</button>
+                    <button type="button" class="btn btn-light m-2 text-dark">Serves 10</button>
+                    <button type="button" class="btn btn-light m-2 text-dark">Serves 14</button>
+                    <hr>
+
+                    <!-- Choose quantity -->
+                    <h6>Quantity</h6>
+                    <div class="dropdown">
+                        <button class="btn btn-light dropdown-toggle m-2 text-dark" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                          Choose ...
+                        </button>
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                          <li><a class="dropdown-item" href="#">1</a></li>
+                          <li><a class="dropdown-item" href="#">2</a></li>
+                          <li><a class="dropdown-item" href="#">3</a></li>
+                        </ul>
+                      </div>
+                    
+                    <ul class="list-group m-2">
+                        <li class="list-group-item">
+                        <input class="form-check-input me-1" type="checkbox" value="" aria-label="...">
+                        GLUTEN FREE 15$
+                        </li>
+                    </ul>
+                    <hr>
+
+                    <!-- Description -->
+                    <h6>Description</h6>
+                    <p class="m-2">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione quis rem expedita vero accusamus consequuntur cumque nihil minima ex iusto nesciunt porro dicta velit quos molestias perspiciatis odio, dolorem repudiandae.
+                    </p>
+                    <hr>
+
+                    <!-- Total price -->
+                    <h6>Total price</h6>
+                    <p class="m-2">$30.00</p>
+                </div>
+
+                <div class="col-lg-6">
+                    <!-- Picture -->
+                    <img src="images/desserts/rainbow_muffins.jpg" alt="" class="card-img-top">
+                    <a href="#" class="nav-link text-dark"><i class="bi bi-facebook pe-2"></i>Share</a>
+                    
+                    <a href="#" class="nav-link text-dark"><i class="bi bi-pinterest pe-2"></i>Pin It</a>
+                </div>
+            </div>
+            <div class="modal-footer">
+            <button type="button" class="btn btn-success text-dark">Add to Cart</button>
+            <button type="button" class="btn btn-danger text-dark" data-bs-dismiss="modal">Close</button>
+            </div>
+        </div>
+        </div>
+    </div>
+
+    <hr class="mt-3"
+
+    <!-- TIPS and TRICKS -->
+    <div class="container-fluid">
+        <h1 id="Tips&Tricks" class="display-4" style="text-align: center;">
+            TIPS & TRICKS
+        </h1>
+        <div class="row m-3 p-3" style="justify-content: center;">
+            <!-- Butter crean CARD -->
+            <div class="col-lg-3 m-3">
+                <div class="card">
+                    <img src="images/tips_and_tricks/butter_cream.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">Best Butter Cream</h5>
+                      <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis labore eveniet nostrum, iure minima architecto, consequuntur sapiente fugit dolorum reiciendis eaque reprehenderit? Est dolor nihil impedit ab reiciendis ut cumque?.</p>
+                      <a href="#butterCream" class="btn btn-light" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="butterCream">Read more ...</a>
+                    </div>
+                    <div class="collapse" id="butterCream">
+                        <div class="card card-body">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis labore eveniet nostrum, iure minima architecto, consequuntur sapiente fugit dolorum reiciendis eaque reprehenderit? Est dolor nihil impedit ab reiciendis ut cumque?. Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis labore eveniet nostrum, iure minima architecto, consequuntur sapiente fugit dolorum reiciendis eaque reprehenderit? Est dolor nihil impedit ab reiciendis ut cumque?.
+                            <p>
+                                <ul>
+                                    <li>Lorem ipsum dolor sit amet.</li>
+                                    <li>Lorem, ipsum dolor.</li>
+                                    <li>Lorem ipsum dolor sit amet consectetur.</li>
+                                  </ul> 
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Cake decoration CARD -->
+            <div class="col-lg-3 m-3">
+                <div class="card">
+                    <img src="images/tips_and_tricks/cake_decoration.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">Using Flowers for Decoration</h5>
+                      <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis labore eveniet nostrum, iure minima architecto, consequuntur sapiente fugit dolorum reiciendis eaque reprehenderit? Est dolor nihil impedit ab reiciendis ut cumque?.</p>
+                      <a href="#cakeDecoration" class="btn btn-light" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="cakeDecoration">Read more ...</a>
+                    </div>
+                    <div class="collapse" id="cakeDecoration">
+                        <div class="card card-body">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis labore eveniet nostrum, iure minima architecto, consequuntur sapiente fugit dolorum reiciendis eaque reprehenderit? Est dolor nihil impedit ab reiciendis ut cumque?. Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis labore eveniet nostrum, iure minima architecto, consequuntur sapiente fugit dolorum reiciendis eaque reprehenderit? Est dolor nihil impedit ab reiciendis ut cumque?.
+                            <p>
+                                <ul>
+                                    <li>Lorem ipsum dolor sit amet.</li>
+                                    <li>Lorem, ipsum dolor.</li>
+                                    <li>Lorem ipsum dolor sit amet consectetur.</li>
+                                  </ul> 
+                            </p>
+                        </div>
+                    </div>            
+                </div>
+            </div>
+
+            <!-- Chocolate dough CARD -->
+            <div class="col-lg-3 m-3">
+                <div class="card">
+                    <img src="images/tips_and_tricks/chocolate_dough.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">Very Light Chocolate Dough</h5>
+                      <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis labore eveniet nostrum, iure minima architecto, consequuntur sapiente fugit dolorum reiciendis eaque reprehenderit? Est dolor nihil impedit ab reiciendis ut cumque?.</p>
+                      <a href="#chocolateDough" class="btn btn-light" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="chocolateDough">Read more ...</a>
+                    </div>
+                    <div class="collapse" id="chocolateDough">
+                        <div class="card card-body">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis labore eveniet nostrum, iure minima architecto, consequuntur sapiente fugit dolorum reiciendis eaque reprehenderit? Est dolor nihil impedit ab reiciendis ut cumque?. Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis labore eveniet nostrum, iure minima architecto, consequuntur sapiente fugit dolorum reiciendis eaque reprehenderit? Est dolor nihil impedit ab reiciendis ut cumque?.
+                            <p>
+                                <ul>
+                                    <li>Lorem ipsum dolor sit amet.</li>
+                                    <li>Lorem, ipsum dolor.</li>
+                                    <li>Lorem ipsum dolor sit amet consectetur.</li>
+                                  </ul> 
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>       
+        </div>
+    </div>
+
+    <hr class="mt-3"
+
+    <!-- ABOUT -->
+    <div class="container-fluid">
+        <h1 id="About" class="display-4" style="text-align: center;">
+            ABOUT
+        </h1>
+
+        <div class="card mb-3">
+            <div class="row g-0">
+              <div class="col-lg-4 m-3">
+                <img src="images/cook.jpg" class="img-fluid" alt="cook" style="border-radius: 15px;">
+              </div>
+              <div class="col-lg-7">
+                <div class="card-body">
+                  <h5 class="card-title">Hello!!</h5>
+                  <p class="card-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corporis consequuntur sit architecto. Ipsum iure quas earum laborum sit quo! Voluptatum debitis ea explicabo voluptate eius necessitatibus, laudantium vero nostrum molestiae! Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corporis consequuntur sit architecto. Ipsum iure quas earum laborum sit quo! Voluptatum debitis ea explicabo voluptate eius necessitatibus, laudantium vero nostrum molestiae!</p>
+                
+                  <i class="display-4 bi bi-instagram m-3"></i>
+
+                  <i class="display-4 bi bi-facebook m-3"></i>
+
+                  <p class="card-text m-3"><small class="text-muted">Last updated 3 months ago</small></p>
+                </div>
+              </div>
+            </div>
+          </div>
+    </div>
+    
+    <hr class="mt-3">
+
+    <!-- FOOTER -->
+    <footer class="container mt-2 pt-2" style="text-align: center;">
+        <p>cake.bake@gemail.com</p>
+        <p>©2022 by Batman</p>
+    </footer>
+
+    <hr class="mt-3">
+ 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
+</body>
+</html>
